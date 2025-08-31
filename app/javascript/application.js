@@ -8,7 +8,7 @@ const rootDoc   = document.documentElement;
 /**
  * Returns nothing.
  *
- * Utility function that applies the theme matching whatever it stored in LocalStorage.\
+ * Utility function that applies the theme matching whatever it stored in LocalStorage.
  */
 function applyTheme () {
     if (localStorage.theme === 'dark') {
