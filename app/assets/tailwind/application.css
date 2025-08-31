@@ -2,16 +2,16 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
-    --color-dark-50: oklch(0.9274 0.096 250.92);
-    --color-dark-100: oklch(0.8660 0.114 254.60);
-    --color-dark-200: oklch(0.7853 0.120 259.86);
-    --color-dark-300: oklch(0.7020 0.126 268.99);
-    --color-dark-400: oklch(0.6015 0.124 284.54);
-    --color-dark-500: oklch(0.5136 0.102 286.21);
-    --color-dark-600: oklch(0.4299 0.077 286.46);
-    --color-dark-700: oklch(0.3588 0.057 287.23);
-    --color-dark-800: oklch(0.3083 0.048 287.10);
-    --color-dark-900: oklch(0.3083 0.048 287.10);
+    --color-dark-900: oklch(0.288 0.048 287.1);
+    --color-dark-800: oklch(0.36  0.052 287.1);
+    --color-dark-700: oklch(0.43  0.058 287.1);
+    --color-dark-600: oklch(0.50  0.065 287.1);
+    --color-dark-500: oklch(0.58  0.072 287.1);
+    --color-dark-400: oklch(0.66  0.078 287.1);
+    --color-dark-300: oklch(0.74  0.075 287.1);
+    --color-dark-200: oklch(0.81  0.07  287.1);
+    --color-dark-100: oklch(0.88  0.06  287.1);
+    --color-dark-50:  oklch(0.94  0.045 287.1);
     --color-light-50:  oklch(0.9703 0.032 239.82);
     --color-light-100: oklch(0.8912 0.063 244.86);
     --color-light-200: oklch(0.8124 0.100 250.06);
