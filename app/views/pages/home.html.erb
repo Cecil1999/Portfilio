@@ -1,41 +1,70 @@
 <div class="flex flex-col mx-auto h-1/3 max-w-5xl overflow-y-auto">
     <!-- 'Picture' Panel -->
-    <div class="border border-dark-500 bg-dark-700 rounded-xl shadow-xl w-full h-128 relative">
+    <div class="border border-light-200 dark:border-dark-900 bg-light-300 dark:bg-dark-900 rounded-xl w-full h-128 relative">
         <!-- Placeholder Image -->
-        <div class="bg-light-200 dark:bg-dark-500 w-full h-full rounded-xl">
+        <!-- <div class="bg-light-200 dark:bg-dark-900 w-full h-full rounded-xl"></div> -->
+        <div class="flex flex-col bg-light-300 dark:bg-dark-800 justify-evenly p-2 w-64 h-38 absolute bottom-15 left-15 rounded-xl border dark:border-dark-700">
+            <h1 class="text-2xl dark:text-dark-100 font-bold">Your Name</h1>
+            <span class="text-xl dark:text-dark-200">'Title'</span>
+            <span class="text-lg dark:text-dark-300">Maybe other text?</span>
         </div>
-        <div class="flex flex-col bg-light-400 dark:bg-dark-400 justify-evenly p-2 w-64 h-38 absolute bottom-15 left-15 shadow-xl rounded-xl border dark:border-dark-500">
-            <h1 class="text-2xl text-dark-100 font-bold">Your Name</h1>
-            <span class="text-xl text-dark-200">'Title'</span>
-            <span class="text-lg text-dark-300">Maybe other text?</span>
+    </div>
+    <!-- Short Description -->
+    <div class="flex w-full h-128 mt-2">
+        <div class="flex-1 pr-2">
+            <div class="bg-light-200 dark:bg-dark-900 border dark:border-dark-700 shadow-md dark:shadow-dark-800 w-full h-full rounded-xl p-2">
+                <div class="flex flex-col justify-evenly text-center">
+                    <h2 class="text-2xl font-bold text-light-200 dark:text-dark-100">Languages</h2>
+                    <div class="mb-4 h-1 border-b-1 dark:border-dark-100"></div>
+                    <div class="flex flex-col text-left p-2">
+                        <div class="flex flex-col">
+                            <h3 class="text-2xl dark:text-dark-100">Professional Experience</h3>
+                            <ul class="list-disc dark:text-dark-200 ps-10 py-2">
+                                <li>XXX (X Years)</li>
+                                <li>XXX (X Years)</li>
+                                <li>XXX (X Years)</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-2xl dark:text-dark-100">Other Experience</h3>
+                            <ul class="list-disc dark:text-dark-200 ps-10 py-2">
+                                <li>XXX (X Years)</li>
+                                <li>XXX (X Years)</li>
+                                <li>XXX (X Years)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1">
+            <div class="bg-light-200 dark:bg-dark-900 border dark:border-dark-700 shadow-md dark:shadow-dark-800 w-full h-full rounded-xl p-2">
+                <div class="flex flex-col justify-evenly text-center">
+                    <h2 class="text-2xl font-bold text-light-200 dark:text-dark-100">Skills/Qualifications</h2>
+                    <div class="mb-4 h-1 border-b-1 dark:border-dark-100"></div>
+                    <ul class="list-disc dark:text-dark-200 ps-10 py-2 text-left">
+                        <li>Skill</li>
+                        <li>Skill</li>
+                        <li>Skill</li>
+                        <li>Skill</li>
+                        <li>Skill</li>
+                        <li>Skill</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="flex w-full h-128 mt-2">
         <!-- Professional Experience -->
         <div class="flex-1 pr-2 w-full h-full">
-            <div class="bg-light-200 dark:bg-dark-500 rounded-xl h-full text-center">
-                <h2 class="text-2xl font-bold text-light-200">Professional Experience</h2>
-                <div class="flex flex-col p-2 justify-evenly h-[92%] overflow-y-auto">
-                    <div class="flex flex-col justify-evenly border border-1 h-fit text-left p-2 rounded-md mb-4">
-                        <span class="text-2xl font-bold">Job Title</span>
-                        <span class="text-sm">Time</span>
-                        <span class="text-lg">
-                            This is where I would put the job description.
-                            I suggest it either being long or sort.
-                        </span>
-                    </div>
-                    <div class="flex flex-col justify-evenly border border-1 h-fit text-left p-2 rounded-md mb-4">
-                        <span class="text-2xl font-bold">Job Title</span>
-                        <span class="text-sm">Time</span>
-                        <span class="text-lg">
-                            This is where I would put the job description.
-                            I suggest it either being long or sort.
-                        </span>
-                    </div>
-                    <div class="flex flex-col justify-evenly border border-1 h-fit text-left p-2 rounded-md mb-4">
-                        <span class="text-2xl font-bold">Job Title</span>
-                        <span class="text-sm">Time</span>
-                        <span class="text-lg">
+            <div class="bg-light-200 dark:bg-dark-900 rounded-xl h-full text-center border dark:border-dark-700 shadow-sm dark:shadow-dark-800">
+                <h2 class="text-2xl font-bold text-light-800 dark:text-dark-100">Professional Experience</h2>
+                <div class="mb-4 h-1 border-b-1 dark:border-dark-100"></div>
+                <div class="flex flex-col p-2 h-[92%] overflow-y-auto">
+                    <div class="flex flex-col justify-evenly border border-1 border-dark-600 h-fit text-left p-2 rounded-md mb-4 dark:bg-dark-800 ">
+                        <span class="text-2xl dark:text-dark-100 font-bold">Job Title</span>
+                        <span class="text-sm dark:text-dark-200">Time</span>
+                        <span class="text-lg dark:text-dark-200">
                             This is where I would put the job description.
                             I suggest it either being long or sort.
                         </span>
@@ -45,13 +74,14 @@
         </div>
         <!-- Education Panel-->
         <div class="flex-1 w-full h-full">
-            <div class="bg-light-200 dark:bg-dark-500 rounded-xl h-full text-center">
-                <h2 class="text-2xl font-bold text-light-200">Education</h2>
+            <div class="bg-light-200 dark:bg-dark-900 rounded-xl h-full text-center border dark:border-dark-700 shadow-md dark:shadow-dark-800">
+                <h2 class="text-2xl font-bold dark:text-dark-100">Education</h2>
+                <div class="mb-4 h-1 border-b-1 dark:border-dark-100"></div>
                 <div class="flex flex-col p-2 h-[92%] overflow-y-auto">
-                    <div class="flex flex-col justify-evenly border border-1 h-fit text-left p-2 rounded-md mb-4">
-                        <span class="text-2xl font-bold">School Name - Degree</span>
-                        <span class="text-sm">Graduation Year</span>
-                        <span class="text-lg">
+                    <div class="flex flex-col justify-evenly border border-1 border-dark-600 h-fit text-left p-2 rounded-md mb-4 dark:bg-dark-800">
+                        <span class="text-2xl dark:text-dark-100 font-bold">School Name - Degree</span>
+                        <span class="text-sm dark:text-dark-200">Time</span>
+                        <span class="text-lg dark:text-dark-200">
                             Degree Explaination
                         </span>
                     </div>
@@ -59,26 +89,16 @@
             </div>
         </div>
     </div>
-    <!-- Short Description -->
-    <div class="flex w-full h-48 mt-2">
-        <div class="flex-1">
-            <div class="bg-light-200 dark:bg-dark-500 w-full h-full rounded-xl p-2">
-                <div class="flex flex-col justify-evenly text-center">
-                    <h2 class="text-2xl font-bold text-light-200">Skills/Qualifications</h2>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Current Projects. -->
     <div class="flex w-full h-128 mt-2">
         <div class="flex-1">
-            <div class="bg-light-200 dark:bg-dark-500 w-full h-full rounded-xl p-2 text-center">
-                <h2 class="text-2xl font-bold text-light-200">Current Projects</h2>
+            <div class="bg-light-200 dark:bg-dark-900 border dark:border-dark-700 shadow-md dark:shadow-dark-800 w-full h-full rounded-xl p-2 text-center">
+                <h2 class="text-2xl font-bold text-light-200 dark:text-dark-100">Current Projects</h2>
                 <div class="flex p-2 flex-wrap">
-                    <div class="flex flex-col justify-evenly border border-1 h-fit w-64 text-left p-2 rounded-md mb-4">
-                        <span class="text-2xl font-bold">Project Name</span>
-                        <span class="text-sm">Project Type</span>
-                        <span class="text-lg">
+                    <div class="flex flex-col justify-evenly border border-1 border-dark-600 h-fit text-left py-4 px-6 rounded-md mb-4 dark:bg-dark-800 ">
+                        <span class="text-2xl dark:text-dark-100 font-bold">Project Name</span>
+                        <span class="text-sm  dark:text-dark-200">Project Type</span>
+                        <span class="text-lg  dark:text-dark-300">
                             Project description
                         </span>
                     </div>
