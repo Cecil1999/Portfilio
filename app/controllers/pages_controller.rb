@@ -10,4 +10,11 @@ class PagesController < ApplicationController
 
     def contact
     end
+
+    def email
+    end
+
+    private
+
+
 end
