@@ -7,7 +7,7 @@ import "controllers"
  *
  * Utility function that applies the theme matching whatever it stored in LocalStorage.
  */
-function applyTheme () {
+const applyTheme = () => {
     const toggleBtn = document.getElementById('theme_toggle');
     const rootDoc   = document.documentElement;
 
