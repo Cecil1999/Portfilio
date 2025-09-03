@@ -2,15 +2,15 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-const toggleBtn = document.getElementById('theme_toggle');
-const rootDoc   = document.documentElement;
-
 /**
  * Returns nothing.
  *
  * Utility function that applies the theme matching whatever it stored in LocalStorage.
  */
 function applyTheme () {
+    const toggleBtn = document.getElementById('theme_toggle');
+    const rootDoc   = document.documentElement;
+
     if (localStorage.theme === 'dark') {
         rootDoc.classList.add('dark');
         toggleBtn.textContent = 'Light Mode';
@@ -20,17 +20,18 @@ function applyTheme () {
     }
 }
 
-toggleBtn.addEventListener('click', () => {
-    if (localStorage.theme === 'dark') {
-        localStorage.theme = 'light';
-    } else {
-        localStorage.theme = 'dark';
-    }
+const buildThemeToggle = () => {
+    document.getElementById('theme_toggle').addEventListener('click', () => {
+        if (localStorage.theme === 'dark') {
+            localStorage.theme = 'light';
+        } else {
+            localStorage.theme = 'dark';
+        }
 
-    applyTheme()
-});
+        applyTheme()
+    });
 
-window.onload = () => {
+
     // User may have already selected a theme that may or may not match whatever OS theme they've chosen.
     // In the case they do, let's respect that choice and display it accordingly.
     if (localStorage.theme) {
@@ -46,4 +47,6 @@ window.onload = () => {
     }
 
     applyTheme();
-}
+};
+
+document.addEventListener('turbo:load', buildThemeToggle);
