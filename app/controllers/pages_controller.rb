@@ -2,15 +2,17 @@ class PagesController < ApplicationController
     before_action :page_params, only: %i[ email ]
 
     def home
-    end
-
-    def projects
+        @projects = JSON.parse(File.read('./app/assets/projects.json'))
     end
 
     def resume
     end
 
     def contact
+    end
+
+    def projects
+        @projects = JSON.parse(File.read('./app/assets/projects.json'))
     end
 
     def email
