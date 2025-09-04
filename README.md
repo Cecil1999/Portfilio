@@ -2,7 +2,7 @@
 
 This repo was mean't to be forked, copied, etc...
 
-**DO NOT TRY AND MERGE YOUR OWN INFORMATION**
+Unless you are pushing a fix for FE stuff or adding onto the repo **DO NOT TRY AND MERGE YOUR OWN INFORMATION**
 
 ## Introduction.
 
@@ -24,8 +24,6 @@ The main page, and any other page _should_ use a simplistic structure that can b
 
 ## Dependencies
 
-> WIP. Need to get full list.
-
-## Other Recommendations
-
-> WIP.
+- Created using Ruby 3.4.5. (Will test older Ruby Versions)
+- Rails-8.0.2.1
+- TailwindCSS ^4.0.0
