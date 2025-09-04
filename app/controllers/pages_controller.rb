@@ -5,9 +5,6 @@ class PagesController < ApplicationController
         @projects = JSON.parse(File.read('./app/assets/projects.json'))
     end
 
-    def resume
-    end
-
     def contact
     end
 
