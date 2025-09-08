@@ -50,7 +50,7 @@ services:
             - .:/app
             - gem_cache:/usr/local/bundle/gems
             - node_modules:/app/node_modules # Likely don't need untill you get node_modules.
-        env_file: .env
+        env_file: .env # May not need this...
 ```
 
 ## Dependencies
@@ -58,4 +58,4 @@ services:
 - Created using Ruby 3.4.5. (Will test older Ruby Versions)
 - Rails-8.0.2.1
 - TailwindCSS ^4.0.0
-- See Gemfile for complete list of dependencies.
+- See Gemfile for complete list of Ruby dependencies.
