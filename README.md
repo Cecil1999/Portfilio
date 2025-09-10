@@ -36,22 +36,7 @@ If you are experienced and prefer using docker CLI you will know what to do base
 
 But my recommendation is _use compose_.
 
-```
-# WIP: Don't take this as final instructions...yet.
-services:
-    app:
-        build:
-            context: .
-            dockerfile: Dockerfile
-        ports:
-            - "3000:3000" // Or whatever open.
-        volumns:
-            # You need 2/3 volumns to my knowledge.
-            - .:/app
-            - gem_cache:/usr/local/bundle/gems
-            - node_modules:/app/node_modules # Likely don't need untill you get node_modules.
-        env_file: .env # May not need this...
-```
+I am going to get a docker compose here soon for the application. Took me _quite a while_ to get my stuff running through traefik.
 
 ## Dependencies
 
