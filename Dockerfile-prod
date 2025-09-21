@@ -1,0 +1,43 @@
+# syntax=docker/dockerfile:1
+ARG RUBY_VERSION=3.4.5
+FROM ruby:$RUBY_VERSION-slim AS base
+
+# Install base OS dependencies
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y \
+    build-essential \
+    git \
+    curl \
+    libjemalloc2 \
+    libvips \
+    libyaml-dev \
+    pkg-config && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+
+# Set correct environment
+ENV RAILS_ENV=production \
+    BUNDLE_PATH=/bundle \
+    BUNDLE_BIN=/bundle/bin \
+    GEM_HOME=/bundle \
+    PATH=/bundle/bin:$PATH \
+    BUNDLER_VERSION=2.6.9 \ 
+	SECRET_KEY_BASE=(RUN rails credentials:show, paste master key here to test, than use ENV variable.)
+
+# Install correct bundler version
+RUN gem install bundler -v ${BUNDLER_VERSION}
+
+# Copy Gemfiles and install gems
+WORKDIR /app
+COPY . ./
+RUN bundle _${BUNDLER_VERSION}_ install
+
+# Precompile assets, tailwind, application.js
+# VERY VERY IMPORTANT. TO KEEP THIS.
+RUN RAILS_ENV=production bundle exec rake assets:precompile
+
+# Expose Rails default port < Change to whatevers necessary.
+EXPOSE 3000
+
+CMD [ "bin/rails", "server", "-b", "0.0.0.0", "-p", "3000" ]
+# You could also use Thruster, depends on your tech stack.
+# Mine runs through Traefik which handles SSL encryption etc. 
